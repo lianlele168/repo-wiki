@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/item-database',
     '/console-commands',
     '/beginner-guide',
-    '/about',
   ];
 
   return routes.map((route) => ({
