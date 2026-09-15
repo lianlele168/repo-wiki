@@ -1,9 +1,11 @@
 import React from 'react';
 import Metadata from 'next';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrapSalvageCalculator from '@/components/ScrapSalvageCalculator';
 import QuotaCalculator from '@/components/QuotaCalculator';
+import AuthorCard from '@/components/AuthorCard';
 import { GAME_INFO, SCRAP_ITEMS, MONSTER_ENTITIES, CONSOLE_COMMANDS, FAQ_ITEMS } from '@/data/wikiData';
 import { Shield, Sparkles, Flame, Terminal, Database, ArrowRight, ShieldAlert, Cpu, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
@@ -20,6 +22,31 @@ export default function Home() {
       <Header />
 
       <main className="flex-1 space-y-16 py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        {/* FAQPage JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              dateModified: '2026-09-15',
+              author: {
+                '@type': 'Person',
+                name: 'Commander "Scrapper" Thorne',
+                jobTitle: 'Lead Salvage Contractor & Heavy Quota Specialist',
+              },
+              mainEntity: FAQ_ITEMS.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+
         {/* Hero Section */}
         <section className="relative rounded-3xl overflow-hidden bg-slate-900/60 border border-amber-500/20 p-8 sm:p-12 text-center space-y-8 backdrop-blur-xl">
           <div className="absolute inset-0 bg-gradient-to-b from-amber-500/10 via-transparent to-cyan-500/10 pointer-events-none" />
@@ -64,6 +91,39 @@ export default function Home() {
             </a>
           </div>
         </section>
+
+        {/* E-E-A-T AUTHOR VERIFICATION */}
+        <AuthorCard />
+
+        {/* GAMEPLAY VISUAL SHOWCASE */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 font-mono">
+          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60 p-4 flex flex-col items-center">
+            <Image
+              src="/images/repo-header.webp"
+              alt="R.E.P.O. Official Semiwork Salvage Facility"
+              width={640}
+              height={360}
+              className="rounded-xl object-cover w-full h-52 border border-slate-800"
+              priority
+            />
+            <p className="text-xs text-slate-400 mt-2 text-center">
+              Figure 1: Official Steam R.E.P.O. Environment — Atmospheric salvage facility.
+            </p>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60 p-4 flex flex-col items-center">
+            <Image
+              src="/images/repo-gameplay.webp"
+              alt="R.E.P.O. Live Extraction Run"
+              width={640}
+              height={360}
+              className="rounded-xl object-contain w-full h-52 bg-black/50 border border-slate-800"
+            />
+            <p className="text-xs text-slate-400 mt-2 text-center">
+              Figure 2: Active Salvage Run — Transporting fragile scrap under sound-stalker threat.
+            </p>
+          </div>
+        </div>
 
         {/* Flagship Calculator 1: Scrap Durability */}
         <section id="scrap-calculator" className="scroll-mt-24 space-y-4">
