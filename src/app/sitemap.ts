@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/console-commands',
     '/beginner-guide',
     '/about',
-    '/privacy-policy',
   ];
 
   return routes.map((route) => ({

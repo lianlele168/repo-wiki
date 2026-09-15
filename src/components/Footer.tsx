@@ -40,7 +40,8 @@ export default function Footer() {
             <li><Link href="/console-commands" className="hover:text-amber-400 transition-colors">PC Console Commands</Link></li>
             <li><Link href="/beginner-guide" className="hover:text-amber-400 transition-colors">Extraction Survival SOP</Link></li>
             <li><Link href="/about" className="hover:text-amber-400 transition-colors">About Us</Link></li>
-            <li><Link href="/privacy-policy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/privacy-policy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-amber-400 transition-colors">Terms of Use</Link></li>
           </ul>
         </div>
       </div>
