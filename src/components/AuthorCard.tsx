@@ -10,7 +10,7 @@ interface AuthorCardProps {
 }
 
 export default function AuthorCard({
-  authorName = "Roblox Wiki Hub Research Desk"Scrapper" Thorne',
+  authorName = 'Gavin "Scrapper" Thorne',
   role = 'Lead Salvage Contractor & Heavy Quota Specialist',
   experience = '350+ Hours In-Game • Level 30+ Deep Facility Clear',
   patchVersion = 'Semiwork Update v2026.2 Verified',
