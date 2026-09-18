@@ -44,7 +44,7 @@ export default function CalculatorPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    dateModified: "2026-09-15",
+
     author: {
       "@type": "Person",
       name: 'Commander "Scrapper" Thorne',

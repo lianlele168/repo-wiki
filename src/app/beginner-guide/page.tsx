@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export const metadata = {
   alternates: { canonical: 'https://repo.robloxwikihub.com/beginner-guide' },
-  title: "Extraction Survival SOP & Beginner Guide — R.E.P.O. Wiki (September 2026)",
+  title: "Extraction Survival SOP & Beginner Guide — R.E.P.O. Wiki ",
   description: "Step-by-step beginner guide for R.E.P.O. Learn overhead scrap transport physics, sound-stalker monster evasion, and team quota optimization.",
 };
 
@@ -35,7 +35,7 @@ export default function BeginnerGuidePage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    dateModified: "2026-09-15",
+
     author: {
       "@type": "Person",
       name: 'Commander "Scrapper" Thorne',

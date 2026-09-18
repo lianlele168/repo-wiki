@@ -30,7 +30,7 @@ export default function Home() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              dateModified: '2026-09-15',
+
               author: {
                 '@type': 'Person',
                 name: 'Commander "Scrapper" Thorne',
