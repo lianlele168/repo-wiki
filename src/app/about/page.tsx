@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ShieldCheck, Mail, ExternalLink, ArrowLeft, Gamepad2 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/about' },
   title: "About Repo Wiki & Network Standards",
   description: "Learn about the Repo fan wiki, our editorial testing process, and the Roblox Wiki Hub network.",
   robots: {

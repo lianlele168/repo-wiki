@@ -5,6 +5,7 @@ import { MONSTER_ENTITIES } from '@/data/wikiData';
 import { Skull, Volume2, ShieldAlert } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/monsters-guide' },
   title: "Monster Entities & Noise Perception Guide — R.E.P.O. Wiki",
   description: "Complete list of monsters in R.E.P.O. Learn noise sensitivity dB thresholds, movement patterns, and squad survival counter tactics.",
 };

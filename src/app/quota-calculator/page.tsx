@@ -5,6 +5,7 @@ import QuotaCalculator from '@/components/QuotaCalculator';
 import { Target, Sparkles } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/quota-calculator' },
   title: "Level Quota & Difficulty Formula Calculator — R.E.P.O. Wiki",
   description: "Calculate level profit target quotas in R.E.P.O. based on map loot pool size, player count, and level difficulty curve scaling.",
 };

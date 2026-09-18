@@ -7,6 +7,7 @@ import { BookOpen, CheckCircle, ShieldAlert, ArrowRight, HelpCircle, Flame, Targ
 import Link from 'next/link';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/beginner-guide' },
   title: "Extraction Survival SOP & Beginner Guide — R.E.P.O. Wiki (September 2026)",
   description: "Step-by-step beginner guide for R.E.P.O. Learn overhead scrap transport physics, sound-stalker monster evasion, and team quota optimization.",
 };

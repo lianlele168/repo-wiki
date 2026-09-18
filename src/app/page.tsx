@@ -11,6 +11,7 @@ import { Shield, Sparkles, Flame, Terminal, Database, ArrowRight, ShieldAlert, C
 import Link from 'next/link';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/' },
   title: "R.E.P.O. Wiki — Scrap Durability Calculator & Quota Guide 2026",
   description: "Ultimate R.E.P.O. (Retrieve, Extract & Profit Operation) database. Calculate scrap item impact decay, level quota targets, gear upgrade ROI, monster sound perception, and console commands.",
   keywords: "R.E.P.O. wiki, REPO scrap calculator, REPO quota formula, REPO item values, REPO console commands, REPO monsters guide, REPO game steam",

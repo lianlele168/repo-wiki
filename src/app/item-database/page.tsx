@@ -5,6 +5,7 @@ import { SCRAP_ITEMS } from '@/data/wikiData';
 import { Database, Search } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/item-database' },
   title: "Scrap Item Database & Weight Table — R.E.P.O. Wiki",
   description: "Complete database of Valuables, Relics, Heavy Machinery, and Electronics in R.E.P.O. Filter by weight, base monetary value, and fragility level.",
 };

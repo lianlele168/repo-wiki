@@ -5,6 +5,7 @@ import { CONSOLE_COMMANDS } from '@/data/wikiData';
 import { Terminal, Shield, Check } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/console-commands' },
   title: "Console Commands & Server Launch Parameters — R.E.P.O. Wiki",
   description: "Working PC console commands for R.E.P.O. Fix FPS stutters, enable 6-player host lobbies, adjust spatial audio HRTF, and toggle developer debug parameters.",
 };

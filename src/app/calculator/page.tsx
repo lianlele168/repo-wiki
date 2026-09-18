@@ -7,6 +7,7 @@ import AuthorCard from '@/components/AuthorCard';
 import { Calculator, Sparkles, HelpCircle, DollarSign, ShieldAlert } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/calculator' },
   title: "R.E.P.O. Calculator | Quota & Scrap Salvage Durability Tool",
   description: "Interactive quota and salvage durability calculator for R.E.P.O. Calculate level target earnings, wall impact value loss, and heavy carry penalties.",
 };

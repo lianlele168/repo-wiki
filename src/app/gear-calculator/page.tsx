@@ -5,6 +5,7 @@ import { GEAR_MODULES } from '@/data/wikiData';
 import { Wrench, CheckCircle2, TrendingUp, DollarSign } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: 'https://repo.robloxwikihub.com/gear-calculator' },
   title: "Gear & Module Upgrade ROI Guide — R.E.P.O. Wiki",
   description: "Compare equipment upgrades in R.E.P.O., including C.A.R.T. Transport, Exo-Suit Strength Boosts, Stealth Boots, and Valuable Scanners.",
 };
