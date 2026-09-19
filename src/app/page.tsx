@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import ScrapSalvageCalculator from '@/components/ScrapSalvageCalculator';
 import QuotaCalculator from '@/components/QuotaCalculator';
 import AuthorCard from '@/components/AuthorCard';
-import { GAME_INFO, SCRAP_ITEMS, MONSTER_ENTITIES, CONSOLE_COMMANDS, FAQ_ITEMS } from '@/data/wikiData';
+import { GAME_INFO, VALUABLE_ITEMS, MONSTER_ENTITIES, UPGRADE_ITEMS, FAQ_ITEMS } from '@/data/wikiData';
 import { Shield, Sparkles, Flame, Terminal, Database, ArrowRight, ShieldAlert, Cpu, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -169,7 +169,7 @@ export default function Home() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800/60 font-mono">
-                  {SCRAP_ITEMS.slice(0, 5).map((item) => (
+                  {VALUABLE_ITEMS.slice(0, 5).map((item) => (
                     <tr key={item.id} className="hover:bg-slate-800/40 transition-colors">
                       <td className="px-6 py-4 font-bold text-slate-100 flex items-center gap-2">
                         {item.name}
@@ -179,8 +179,8 @@ export default function Home() {
                           {item.category}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-amber-400 font-bold">${item.baseValue.toLocaleString()}</td>
-                      <td className="px-6 py-4 text-cyan-300">{item.weightKg} kg</td>
+                      <td className="px-6 py-4 text-amber-400 font-bold">{item.valueNote}</td>
+                      <td className="px-6 py-4 text-cyan-300">{item.size} · {item.tier}-Tier</td>
                       <td className="px-6 py-4 text-xs">
                         <span className={`px-2 py-0.5 rounded-full border ${
                           item.fragility === 'Extreme' ? 'bg-red-500/10 border-red-500/40 text-red-400' :
@@ -211,7 +211,7 @@ export default function Home() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-lg font-bold text-slate-100 font-mono">{monster.name}</h3>
-                    <span className="text-xs text-slate-400">Noise Sensitivity: <strong className="text-amber-300">{monster.noiseSensitivity}</strong></span>
+                    <span className="text-xs text-slate-400"><strong className="text-amber-300">{monster.hp} HP · {monster.threat} threat</strong></span>
                   </div>
                   <span className={`px-3 py-1 rounded-lg text-xs font-mono font-bold border ${
                     monster.threatLevel === 'S' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
@@ -232,19 +232,19 @@ export default function Home() {
         <section className="space-y-6">
           <div className="flex items-center space-x-2">
             <Terminal className="w-6 h-6 text-emerald-400" />
-            <h2 className="text-2xl font-bold text-slate-100 font-mono uppercase tracking-wider">Popular PC Console Commands</h2>
+            <h2 className="text-2xl font-bold text-slate-100 font-mono uppercase tracking-wider">Service Station Upgrades</h2>
           </div>
 
           <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-xl space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {CONSOLE_COMMANDS.map((cmd, idx) => (
-                <div key={idx} className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between font-mono">
+              {UPGRADE_ITEMS.map((upg, idx) => (
+                <div key={idx} className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between">
                   <div>
-                    <code className="text-xs text-emerald-400 font-bold">{cmd.command}</code>
-                    <p className="text-[11px] text-slate-400 mt-1 font-sans">{cmd.effect}</p>
+                    <code className="text-xs text-emerald-400 font-bold">{upg.name}</code>
+                    <p className="text-[11px] text-slate-400 mt-1">{upg.effect}</p>
                   </div>
                   <span className="text-[10px] bg-slate-900 text-slate-400 border border-slate-800 px-2 py-1 rounded">
-                    {cmd.category}
+                    {upg.priority}
                   </span>
                 </div>
               ))}

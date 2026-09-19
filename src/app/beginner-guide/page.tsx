@@ -19,14 +19,14 @@ const BEGINNER_FAQS = [
   },
   {
     question: "What gear upgrade should solo runners purchase first?",
-    answer: "Prioritize the Exo-Suit Strength Upgrade I ($1,200). It expands your solo overhead carry limit by +40kg, allowing you to carry heavy generators without dragging them across the floor.",
+    answer: "Buy Stamina and Max Health first — energy is the resource every run runs out of. Strength comes next if you want to haul S-tier items like the Grandfather Clock without a second player.",
   },
   {
     question: "How do you detect the Scrap Mimic before touching it?",
     answer: "Aim the Valuable Scanner at the suspect object. Authentic scrap emits an encrypted green serial ID code, while mimics return a corrupted red static signal.",
   },
   {
-    question: "What should you do when a Screamer Alarm Sentry triggers?",
+    question: "What should you do when the Upscream stuns you?",
     answer: "Deploy an EMP disruption grenade immediately to disable the sentry, then retreat into the nearest airlock chamber until the facility security lockdown cycle clears.",
   },
 ];
@@ -112,7 +112,7 @@ export default function BeginnerGuidePage() {
               <CheckCircle className="w-5 h-5 text-amber-400" /> Rule 1: Never Drag Heavy Machinery on Bare Concrete
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Dragging heavy objects like Industrial Generators (85kg) or Vintage Arcade Cabinets (50kg) across unpaved floors induces rapid friction damage. Every second of contact causes a continuous 5% durability decay and emits grinding noise exceeding 65 decibels. This acoustic signature aggros Sound-Stalker Phantoms from up to two zones away. Always carry items overhead or deploy the C.A.R.T. vehicle for silent wheel transport.
+              Doors, stairs and corners are where most value damage happens — every collision permanently knocks money off whatever you are carrying, and fragile items like glass and ceramic lose far more per hit than sturdy metal. Carry items carefully rather than dragging them, and remember that some monsters (Reaper, Rugrat) will attack your loot itself, so secure valuables before fighting.
             </p>
           </div>
 
@@ -121,7 +121,7 @@ export default function BeginnerGuidePage() {
               <CheckCircle className="w-5 h-5 text-cyan-400" /> Rule 2: Prioritize Scanner Pings Over Blind Looting
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed">
-              Diving deep into unmapped facility wings without sensor equipment is the primary cause of squad wipes. Investing $800 into the Valuable Scanner Tracker allows you to pinpoint high-density loot rooms through concrete walls, enabling your team to chart the shortest extraction path and avoid wandering into patrol routes of Crawler Behemoths.
+              Diving deep into unmapped facility wings without a route plan is the primary cause of squad wipes. Map the extraction points first, plan one clean loop per floor, and remember sound-hunting entities like the Huntsman punish careless noise — crouch, mute your mic near threats, and toss objects to redirect them.
             </p>
           </div>
 

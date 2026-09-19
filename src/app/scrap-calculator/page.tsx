@@ -7,7 +7,7 @@ import { Shield, Sparkles } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: 'https://repo.robloxwikihub.com/scrap-calculator' },
   title: "Scrap Durability & Impact Value Calculator — R.E.P.O. Wiki",
-  description: "Calculate item value decay from wall hits, floor drops, and dragging penalties in R.E.P.O. Optimize your solo carry and C.A.R.T. extraction profits.",
+  description: "Plan how collisions eat into your haul value in R.E.P.O. Estimate extraction payout per impact with documented valuable examples.",
 };
 
 export default function ScrapCalculatorPage() {

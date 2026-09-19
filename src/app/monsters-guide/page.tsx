@@ -40,7 +40,7 @@ export default function MonstersGuidePage() {
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between text-slate-400">
                   <span>Noise Perception Threshold:</span>
-                  <strong className="text-amber-400 font-mono">{monster.noiseSensitivity}</strong>
+                  <strong className="text-amber-400 font-mono">{monster.hp} HP · {monster.damage} dmg · {monster.threat} threat</strong>
                 </div>
                 <p className="text-slate-400 leading-relaxed pt-2">{monster.behavior}</p>
               </div>

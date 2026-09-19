@@ -27,7 +27,7 @@ export default function Footer() {
           <ul className="space-y-2 text-xs">
             <li><Link href="/scrap-calculator" className="hover:text-amber-400 transition-colors">Scrap Durability Calculator</Link></li>
             <li><Link href="/quota-calculator" className="hover:text-amber-400 transition-colors">Quota Target Formula</Link></li>
-            <li><Link href="/gear-calculator" className="hover:text-amber-400 transition-colors">Gear ROI & C.A.R.T. Modules</Link></li>
+            <li><Link href="/gear-calculator" className="hover:text-amber-400 transition-colors">Upgrade Priority Guide</Link></li>
             <li><Link href="/item-database" className="hover:text-amber-400 transition-colors">Valuables & Relics Index</Link></li>
           </ul>
         </div>

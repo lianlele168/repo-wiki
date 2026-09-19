@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { SCRAP_ITEMS } from '@/data/wikiData';
+import { VALUABLE_ITEMS } from '@/data/wikiData';
 import { Database, Search } from 'lucide-react';
 
 export const metadata = {
@@ -42,7 +42,7 @@ export default function ItemDatabasePage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-800/60 font-mono">
-                {SCRAP_ITEMS.map((item) => (
+                {VALUABLE_ITEMS.map((item) => (
                   <tr key={item.id} className="hover:bg-slate-800/40 transition-colors">
                     <td className="px-6 py-4 font-bold text-slate-100">{item.name}</td>
                     <td className="px-6 py-4 text-xs">
@@ -50,8 +50,8 @@ export default function ItemDatabasePage() {
                         {item.category}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-amber-400 font-bold">${item.baseValue.toLocaleString()}</td>
-                    <td className="px-6 py-4 text-cyan-300">{item.weightKg} kg</td>
+                    <td className="px-6 py-4 text-amber-400 font-bold">{item.valueNote}</td>
+                    <td className="px-6 py-4 text-cyan-300">{item.size} · {item.tier}-Tier</td>
                     <td className="px-6 py-4 text-xs">
                       <span className={`px-2 py-0.5 rounded-full border ${
                         item.fragility === 'Extreme' ? 'bg-red-500/10 border-red-500/40 text-red-400' :
@@ -65,7 +65,7 @@ export default function ItemDatabasePage() {
                       {item.soloCarryable ? (
                         <span className="text-emerald-400">Yes</span>
                       ) : (
-                        <span className="text-red-400">Requires 2P / C.A.R.T.</span>
+                        <span className="text-red-400">Team carry advised</span>
                       )}
                     </td>
                     <td className="px-6 py-4 text-xs font-sans text-slate-400 max-w-xs">{item.description}</td>

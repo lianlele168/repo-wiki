@@ -23,7 +23,7 @@ const CALCULATOR_FAQS = [
   },
   {
     question: "How do you transport heavy 85kg generators without damage penalties?",
-    answer: "Deploy the C.A.R.T. Transport Vehicle or equip the Exo-Suit Strength Upgrade. Carrying heavy machinery with bare hands without strength upgrades forces dragging, causing constant durability damage and alerting Sound-Stalkers.",
+    answer: "Buy the Strength upgrade so you can carry heavy S-tier items properly instead of dragging them. Every collision knocks value off your haul, and doors, stairs and corners are where most hits happen.",
   },
 ];
 
