@@ -33,7 +33,7 @@ export default function MonstersGuidePage() {
               <div className="flex justify-between items-center pb-3 border-b border-slate-800">
                 <h3 className="text-xl font-bold font-mono text-slate-100">{monster.name}</h3>
                 <span className="bg-red-500/20 text-red-300 border border-red-500/40 px-3 py-1 rounded-lg text-xs font-mono font-bold">
-                  Class {monster.threatLevel} Threat
+                  {monster.threat} Threat
                 </span>
               </div>
 
@@ -46,7 +46,7 @@ export default function MonstersGuidePage() {
               </div>
 
               <div className="p-4 bg-slate-950 rounded-xl border border-slate-800/80 text-xs text-emerald-300 leading-relaxed">
-                🛡️ <strong>Survival Counter:</strong> {monster.counterStrategy}
+                🛡️ <strong>Survival Counter:</strong> {monster.counter}
               </div>
             </div>
           ))}

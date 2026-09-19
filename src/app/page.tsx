@@ -176,15 +176,15 @@ export default function Home() {
                       </td>
                       <td className="px-6 py-4 text-xs">
                         <span className="bg-slate-800 text-slate-400 border border-slate-700 px-2 py-1 rounded-md">
-                          {item.category}
+                          {item.fragility} fragility
                         </span>
                       </td>
                       <td className="px-6 py-4 text-amber-400 font-bold">{item.valueNote}</td>
                       <td className="px-6 py-4 text-cyan-300">{item.size} · {item.tier}-Tier</td>
                       <td className="px-6 py-4 text-xs">
                         <span className={`px-2 py-0.5 rounded-full border ${
-                          item.fragility === 'Extreme' ? 'bg-red-500/10 border-red-500/40 text-red-400' :
-                          item.fragility === 'High' ? 'bg-amber-500/10 border-amber-500/40 text-amber-400' :
+                          item.fragility === 'High' ? 'bg-red-500/10 border-red-500/40 text-red-400' :
+                          item.fragility === 'Medium' ? 'bg-amber-500/10 border-amber-500/40 text-amber-400' :
                           'bg-emerald-500/10 border-emerald-500/40 text-emerald-400'
                         }`}>
                           {item.fragility}
@@ -214,14 +214,14 @@ export default function Home() {
                     <span className="text-xs text-slate-400"><strong className="text-amber-300">{monster.hp} HP · {monster.threat} threat</strong></span>
                   </div>
                   <span className={`px-3 py-1 rounded-lg text-xs font-mono font-bold border ${
-                    monster.threatLevel === 'S' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                    monster.threat === 'Extreme' ? 'bg-red-500/20 text-red-400 border-red-500/40' : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
                   }`}>
-                    Threat: Class {monster.threatLevel}
+                    Threat: {monster.threat}
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">{monster.behavior}</p>
                 <div className="p-3 bg-slate-950/60 rounded-xl border border-slate-800 text-xs text-emerald-300/90 leading-relaxed">
-                  🛡️ <strong>Counter Tactic:</strong> {monster.counterStrategy}
+                  🛡️ <strong>Counter Tactic:</strong> {monster.counter}
                 </div>
               </div>
             ))}

@@ -47,14 +47,13 @@ export default function ItemDatabasePage() {
                     <td className="px-6 py-4 font-bold text-slate-100">{item.name}</td>
                     <td className="px-6 py-4 text-xs">
                       <span className="bg-slate-800 text-slate-400 border border-slate-700 px-2 py-1 rounded-md">
-                        {item.category}
+                        {item.fragility} fragility
                       </span>
                     </td>
                     <td className="px-6 py-4 text-amber-400 font-bold">{item.valueNote}</td>
                     <td className="px-6 py-4 text-cyan-300">{item.size} · {item.tier}-Tier</td>
                     <td className="px-6 py-4 text-xs">
                       <span className={`px-2 py-0.5 rounded-full border ${
-                        item.fragility === 'Extreme' ? 'bg-red-500/10 border-red-500/40 text-red-400' :
                         item.fragility === 'High' ? 'bg-amber-500/10 border-amber-500/40 text-amber-400' :
                         'bg-emerald-500/10 border-emerald-500/40 text-emerald-400'
                       }`}>
